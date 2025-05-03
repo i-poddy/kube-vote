@@ -10,7 +10,7 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 5000
+      nodePort: 30001
   selector:
     name: voting-app-pod
     app: kube-vote
