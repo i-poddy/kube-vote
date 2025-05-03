@@ -35,9 +35,9 @@ fi
 # Check if Minikube is running as vagrant user
 echo "Checking if Minikube is running as the vagrant user..."
 
-minikube_status=$(sudo -u vagrant "minikube status" | grep -i 'host: running')
+minikube_status=$(sudo -u vagrant minikube status | grep -i 'host: Running')
 
-if [[ "$minikube_status" == *"host: running"* ]]; then
+if [[ "$minikube_status" == *"host: Running"* ]]; then
   echo "Minikube is running as the vagrant user!"
 else
   echo "Minikube is not running as the vagrant user. Please start it using 'minikube start' as vagrant."
